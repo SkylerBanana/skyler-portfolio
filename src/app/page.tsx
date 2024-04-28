@@ -5,10 +5,6 @@ export default function Home() {
     <>
       <Nav />
       <Hero />
-
-      <div className="flex justify-center">
-        <p className="text-4xl">GoodBye World</p>
-      </div>
     </>
   );
 }

@@ -1,7 +1,11 @@
 export default function Hero() {
   return (
     <>
-      <p>Hi im the Hero</p>
+      <div id="hero" className="grid items-center">
+        <div id="hero-image"></div>
+
+        <div id="hero-text"></div>
+      </div>
     </>
   );
 }
