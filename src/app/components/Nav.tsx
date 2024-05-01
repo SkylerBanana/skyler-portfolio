@@ -18,10 +18,10 @@ export default function Nav() {
   }
 
   return (
-    <div className="flex flex-col justify-start md:justify-center w-screen">
+    <>
       <div
         id="nav_container"
-        className="flex items-center w-full mt-8 md:fixed top-0 justify-between z-50 px-4"
+        className="flex items-center w-full mt-8 md:sticky top-0 justify-between z-50 px-4 "
       >
         <div className="flex items-center justify-start gap-12">
           <div className="flex items-center gap-4">
@@ -66,22 +66,24 @@ export default function Nav() {
         </a>
       </div>
 
-      <nav
-        id="mobile_Dropdown"
-        className={`${
-          isDropdownOpen ? "flex" : "hidden"
-        }  flex-col gap-2 text-[#A1A8D9] justify-start `}
-      >
-        {links.map((link, index) => (
-          <a
-            key={index}
-            href={link.url}
-            className=" hover:text-white transition-colors duration-300"
-          >
-            {link.text}
-          </a>
-        ))}
-      </nav>
-    </div>
+      <div className="flex  justify-center">
+        <nav
+          id="mobile_Dropdown"
+          className={`${
+            isDropdownOpen ? "flex" : "hidden"
+          }  flex-col gap-2 text-[#A1A8D9] justify-start mt-4  bg-[#373c65] rounded-lg fixed width `}
+        >
+          {links.map((link, index) => (
+            <a
+              key={index}
+              href={link.url}
+              className=" hover:text-white transition-colors duration-300 h-20 w-auto hover:bg-violet-600 rounded-lg  flex items-center "
+            >
+              {link.text}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </>
   );
 }

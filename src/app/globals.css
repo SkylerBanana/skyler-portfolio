@@ -13,3 +13,12 @@ body {
   display: flex;
   justify-content: center;
 }
+.width {
+  width: 95%;
+}
+@media screen and (max-width: 400px) {
+  .hero_img {
+    width: 80%;
+    height: 80%;
+  }
+}
